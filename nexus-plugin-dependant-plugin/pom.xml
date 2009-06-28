@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sonatype.nexus.plugins.samples</groupId>
+    <artifactId>nexus-sample-plugins</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>nexus-plugin-dependant-plugins</artifactId>
+
+  <packaging>jar</packaging>
+
+  <name>Nexus Sample Plugins :: Plugin Interdepencencies Demo</name>
+
+  <url>http://www.sonatype.com/people/2009/06/writing-plugins-for-nexus-part-1/</url>
+
+  <dependencies>
+
+    <!-- Nexus Plugin API -->
+    <dependency>
+      <groupId>org.sonatype.nexus</groupId>
+      <artifactId>nexus-plugin-api</artifactId>
+    </dependency>
+
+    <!-- We will reference the Virus scanner -->
+    <dependency>
+      <groupId>org.sonatype.nexus.plugins.samples</groupId>
+      <artifactId>nexus-kungfu-virusscanner-plugin</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Testing -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.sonatype.nexus</groupId>
+        <artifactId>nexuspd-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
