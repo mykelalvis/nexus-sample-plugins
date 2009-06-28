@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.sonatype.nexus.rest.feeds.sources.FeedSource;
 
@@ -17,6 +18,7 @@ import com.sun.syndication.feed.synd.SyndEntryImpl;
 import com.sun.syndication.feed.synd.SyndFeed;
 import com.sun.syndication.feed.synd.SyndFeedImpl;
 
+@Named( InfectedItemsFeedSource.CHANNEL_KEY )
 public class InfectedItemsFeedSource
     implements FeedSource
 {
