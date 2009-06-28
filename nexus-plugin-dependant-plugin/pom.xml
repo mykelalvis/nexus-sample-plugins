@@ -9,7 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>nexus-plugin-dependant-plugins</artifactId>
+  <artifactId>nexus-plugin-dependant-plugin</artifactId>
 
   <packaging>jar</packaging>
 

@@ -1,16 +1,29 @@
 package org.sonatype.nexus.plugin.samples.interdep;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Map;
+
+import javax.inject.Inject;
 
 import org.sonatype.nexus.rest.feeds.sources.FeedSource;
 
+import com.sun.syndication.feed.synd.SyndContent;
+import com.sun.syndication.feed.synd.SyndContentImpl;
+import com.sun.syndication.feed.synd.SyndEntry;
+import com.sun.syndication.feed.synd.SyndEntryImpl;
 import com.sun.syndication.feed.synd.SyndFeed;
+import com.sun.syndication.feed.synd.SyndFeedImpl;
 
 public class InfectedItemsFeedSource
     implements FeedSource
 {
     public static final String CHANNEL_KEY = "infectedItems";
+
+    @Inject
+    private InfectedFilesCollector infectedFilesCollector;
 
     public String getFeedKey()
     {
@@ -25,8 +38,46 @@ public class InfectedItemsFeedSource
     public SyndFeed getFeed( Integer from, Integer count, Map<String, String> params )
         throws IOException
     {
-        // TODO Auto-generated method stub
-        return null;
+        List<String> reportItems = infectedFilesCollector.getInfectedItemsReport();
+
+        SyndFeedImpl feed = new SyndFeedImpl();
+
+        feed.setTitle( getFeedKey() );
+
+        feed.setDescription( "Infected files found" );
+
+        feed.setAuthor( "Nexus" );
+
+        feed.setPublishedDate( new Date() );
+
+        List<SyndEntry> entries = new ArrayList<SyndEntry>( reportItems.size() );
+
+        for ( String item : reportItems )
+        {
+            SyndEntry entry = new SyndEntryImpl();
+
+            entry.setTitle( "Infected File Detected" );
+
+            SyndContent content = new SyndContentImpl();
+
+            content.setType( "text/plain" );
+
+            content.setValue( item );
+
+            entry.setPublishedDate( feed.getPublishedDate() );
+
+            entry.setAuthor( feed.getAuthor() );
+
+            entry.setLink( "http://nexus.sonatype.org/" );
+
+            entry.setDescription( content );
+
+            entries.add( entry );
+        }
+
+        feed.setEntries( entries );
+
+        return feed;
     }
 
 }
