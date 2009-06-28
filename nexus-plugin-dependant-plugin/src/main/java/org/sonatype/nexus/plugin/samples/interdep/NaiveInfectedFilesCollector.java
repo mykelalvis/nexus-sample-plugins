@@ -35,11 +35,15 @@ public class NaiveInfectedFilesCollector
         sb.append( item.getPath() );
         sb.append( "\"." );
 
+        System.out.println( " *** Added infected report item: " + item.getPath() );
+
         reportEntries.add( sb.toString() );
     }
 
     public List<String> getInfectedItemsReport()
     {
+        System.out.println( " *** Retrieving infected report of size: " + reportEntries.size() );
+
         return Collections.unmodifiableList( reportEntries );
     }
 

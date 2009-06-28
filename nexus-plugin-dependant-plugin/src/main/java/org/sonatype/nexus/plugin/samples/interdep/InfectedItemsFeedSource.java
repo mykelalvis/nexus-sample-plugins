@@ -46,7 +46,7 @@ public class InfectedItemsFeedSource
 
         feed.setTitle( getFeedKey() );
 
-        feed.setDescription( "Infected files found" );
+        feed.setDescription( getFeedName() );
 
         feed.setAuthor( "Nexus" );
 

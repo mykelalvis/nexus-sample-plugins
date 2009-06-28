@@ -14,7 +14,7 @@ public class InfectedFilesCollectorEventInspector
 
     public boolean accepts( Event<?> evt )
     {
-        return evt instanceof InfectedItemFoundEvent;
+        return ( evt instanceof InfectedItemFoundEvent );
     }
 
     public void inspect( Event<?> evt )
@@ -23,5 +23,4 @@ public class InfectedFilesCollectorEventInspector
 
         infectedFilesCollector.addInfectedItemReport( ievt.getEventSender(), ievt.getInfectedFile() );
     }
-
 }
