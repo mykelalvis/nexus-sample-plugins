@@ -46,6 +46,11 @@
       <plugin>
         <groupId>org.sonatype.nexus</groupId>
         <artifactId>nexuspd-maven-plugin</artifactId>
+        <configuration>
+          <pluginDependencies>
+            <pluginDependency>org.sonatype.nexus.plugins.samples:nexus-kungfu-virusscanner-plugin:${project.version}</pluginDependency>
+          </pluginDependencies>
+        </configuration>
       </plugin>
     </plugins>
   </build>
