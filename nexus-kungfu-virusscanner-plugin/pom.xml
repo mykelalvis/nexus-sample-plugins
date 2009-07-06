@@ -33,13 +33,4 @@
 
   </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.sonatype.nexus</groupId>
-        <artifactId>nexuspd-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
-
 </project>

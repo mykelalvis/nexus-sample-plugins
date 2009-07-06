@@ -11,7 +11,7 @@
 
   <artifactId>nexus-plugin-dependant-plugin</artifactId>
 
-  <packaging>jar</packaging>
+  <packaging>nexus-plugin</packaging>
 
   <name>Nexus Sample Plugins :: Plugin Interdepencencies Demo</name>
 

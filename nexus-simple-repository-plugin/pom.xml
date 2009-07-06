@@ -11,7 +11,7 @@
 
   <artifactId>nexus-simple-repository-plugin</artifactId>
 
-  <packaging>jar</packaging>
+  <packaging>nexus-plugin</packaging>
 
   <name>Nexus Sample Plugins :: Simple Repository</name>
 
@@ -36,14 +36,5 @@
     </dependency>
 
   </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.sonatype.nexus</groupId>
-        <artifactId>nexuspd-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>
