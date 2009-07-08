@@ -18,6 +18,13 @@
   <url>http://www.sonatype.com/people/2009/06/writing-plugins-for-nexus-part-1/</url>
 
   <dependencies>
+    
+    <!-- Used to show where runtime dependencies land in the Nexus plugin bundle. -->
+    <dependency>
+      <groupId>jdom</groupId>
+      <artifactId>jdom</artifactId>
+      <version>1.1</version>
+    </dependency>      
 
     <!-- Nexus Plugin API -->
     <dependency>
