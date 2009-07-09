@@ -7,5 +7,7 @@ import org.sonatype.nexus.proxy.repository.HostedRepository;
 public interface SampleRepository
     extends HostedRepository
 {
-    String boo();
+    RepositoryColor getRepositoryColor();
+
+    void setRepositoryColor( RepositoryColor color );
 }
