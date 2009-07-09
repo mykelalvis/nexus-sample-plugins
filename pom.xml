@@ -38,14 +38,12 @@
         <artifactId>nexus-plugin-api</artifactId>
         <version>${nexus.version}</version>
         <type>jar</type>
-        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.sonatype.nexus</groupId>
         <artifactId>nexus-proxy</artifactId>
         <version>${nexus.version}</version>
         <type>jar</type>
-        <scope>provided</scope>
       </dependency>
 
       <!-- Testing -->
