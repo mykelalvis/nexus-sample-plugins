@@ -9,11 +9,11 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>nexus-simple-repository-plugin</artifactId>
+  <artifactId>nexus-hybrid-plugin</artifactId>
 
   <packaging>nexus-plugin</packaging>
 
-  <name>Nexus Sample Plugins :: Simple Custom Repository</name>
+  <name>Nexus Sample Plugins :: Hybrid plugin</name>
 
   <url>http://www.sonatype.com/people/2009/06/writing-plugins-for-nexus-part-1/</url>
 
@@ -36,5 +36,5 @@
     </dependency>
 
   </dependencies>
-
+  
 </project>
