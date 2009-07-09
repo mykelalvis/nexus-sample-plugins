@@ -11,7 +11,7 @@
 
   <artifactId>nexus-kungfu-virusscanner-plugin</artifactId>
 
-  <packaging>jar</packaging>
+  <packaging>nexus-plugin</packaging>
 
   <name>Nexus Sample Plugins :: KungFu VirusScanner</name>
 
