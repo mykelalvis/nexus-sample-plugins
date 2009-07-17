@@ -59,14 +59,4 @@
     </dependencies>
   </dependencyManagement>
 
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.sonatype.nexus</groupId>
-        <artifactId>nexus-plugin-packaging</artifactId>
-        <version>${nexus.version}</version>
-      </extension>
-    </extensions>
-  </build>
-    
 </project>
