@@ -15,12 +15,12 @@ public class SampleRepositoryConfiguration
 
     public RepositoryColor getRepositoryColor()
     {
-        return RepositoryColor.valueOf( getNodeValue( getConfiguration( false ), REPOSITORY_COLOR, RepositoryColor.RED
+        return RepositoryColor.valueOf( getNodeValue( getRootNode(), REPOSITORY_COLOR, RepositoryColor.RED
             .toString() ) );
     }
 
     public void setRepositoryColor( RepositoryColor color )
     {
-        setNodeValue( getConfiguration( true ), REPOSITORY_COLOR, color.toString() );
+        setNodeValue( getRootNode(), REPOSITORY_COLOR, color.toString() );
     }
 }
