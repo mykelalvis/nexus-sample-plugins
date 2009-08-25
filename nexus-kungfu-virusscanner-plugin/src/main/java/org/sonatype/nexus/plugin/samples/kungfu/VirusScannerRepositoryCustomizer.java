@@ -3,7 +3,7 @@ package org.sonatype.nexus.plugin.samples.kungfu;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.sonatype.nexus.configuration.ConfigurationException;
+import org.sonatype.configuration.ConfigurationException;
 import org.sonatype.nexus.plugins.RepositoryCustomizer;
 import org.sonatype.nexus.proxy.repository.ProxyRepository;
 import org.sonatype.nexus.proxy.repository.Repository;

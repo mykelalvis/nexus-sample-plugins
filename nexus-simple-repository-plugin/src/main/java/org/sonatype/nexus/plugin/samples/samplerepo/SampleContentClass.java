@@ -2,23 +2,25 @@ package org.sonatype.nexus.plugin.samples.samplerepo;
 
 import javax.inject.Named;
 
+import org.sonatype.nexus.proxy.registry.AbstractIdContentClass;
 import org.sonatype.nexus.proxy.registry.ContentClass;
-import org.sonatype.nexus.proxy.registry.DefaultContentClass;
 
-@Named( "sample" )
+@Named( SampleContentClass.ID )
 public class SampleContentClass
-    extends DefaultContentClass
+    extends AbstractIdContentClass
     implements ContentClass
 {
-    public SampleContentClass()
-    {
-        super( "sample" );
-    }
+    public static final String ID = "sample";
 
     @Override
     public boolean isGroupable()
     {
         // NOT GROUPABLE
         return false;
+    }
+
+    public String getId()
+    {
+        return ID;
     }
 }
