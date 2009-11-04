@@ -15,7 +15,7 @@
 
   <packaging>pom</packaging>
 
-  <name>Nexus Sample Plugins</name>
+  <name>Nexus Sample Plugins Parent</name>
 
   <url>http://nexus.sonatype.org/</url>
 
@@ -33,14 +33,6 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- Nexus Plugin API -->
-      <dependency>
-        <groupId>org.sonatype.nexus</groupId>
-        <artifactId>nexus-plugin-api</artifactId>
-        <version>${nexus.version}</version>
-        <scope>provided</scope>
-        <type>jar</type>
-      </dependency>
       <dependency>
         <groupId>org.sonatype.nexus</groupId>
         <artifactId>nexus-proxy</artifactId>

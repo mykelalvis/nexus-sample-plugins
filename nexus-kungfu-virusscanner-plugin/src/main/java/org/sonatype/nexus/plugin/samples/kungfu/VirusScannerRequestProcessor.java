@@ -13,6 +13,13 @@ import org.sonatype.nexus.proxy.repository.Repository;
 import org.sonatype.nexus.proxy.repository.RequestProcessor;
 import org.sonatype.plexus.appevents.ApplicationEventMulticaster;
 
+/**
+ * This is a user implementation of a Nexus core interface marked with @ExtensionPoint (in short: implementation of
+ * extension point). Hence, this non abstract class will be managed as component by the core. All the IoC benefits are
+ * applied to this class.
+ * 
+ * @author cstamas
+ */
 @Named( "virusScanner" )
 public class VirusScannerRequestProcessor
     implements RequestProcessor
@@ -24,27 +31,22 @@ public class VirusScannerRequestProcessor
     private @Named( "XY" )
     VirusScanner virusScanner;
 
-    // @Inject
-    // private @Named("A") CommonDependency commonDependency;
-
     public boolean process( Repository repository, ResourceStoreRequest request, Action action )
     {
-        // Check dependency
-        // System.out.println( "VirusScannerRequestProcessor --- CommonDependency data: " + commonDependency.getData()
-        // );
-
-        // don't decide until have content
+        // don't decide until have content but say "yeah, okie-dokie"
         return true;
     }
 
     public boolean shouldProxy( ProxyRepository repository, ResourceStoreRequest request )
     {
-        // don't decide until have content
+        // don't decide until have content but say "yeah, okie-dokie"
         return true;
     }
 
     public boolean shouldCache( ProxyRepository repository, AbstractStorageItem item )
     {
+        // we have a content here, just before it is fetched from remote and is about to be stored/cached in local
+        // storage. The client still did not get a single byte, so we can check it here and prevent it if infected
         if ( item instanceof StorageFileItem )
         {
             StorageFileItem file = (StorageFileItem) item;

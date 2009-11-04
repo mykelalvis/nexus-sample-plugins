@@ -18,6 +18,12 @@ import com.sun.syndication.feed.synd.SyndEntryImpl;
 import com.sun.syndication.feed.synd.SyndFeed;
 import com.sun.syndication.feed.synd.SyndFeedImpl;
 
+/**
+ * A core extension point implementation. The FeedSource core extension point adds a new RSS feeds source. Here, this
+ * RSS feed will just list all the reported infected items.
+ * 
+ * @author cstamas
+ */
 @Named( InfectedItemsFeedSource.CHANNEL_KEY )
 public class InfectedItemsFeedSource
     implements FeedSource

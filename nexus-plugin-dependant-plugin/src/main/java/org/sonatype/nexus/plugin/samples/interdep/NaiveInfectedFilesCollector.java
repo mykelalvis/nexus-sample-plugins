@@ -8,6 +8,12 @@ import org.sonatype.nexus.proxy.item.StorageFileItem;
 import org.sonatype.nexus.proxy.repository.ProxyRepository;
 import org.sonatype.nexus.proxy.repository.Repository;
 
+/**
+ * This is a "naive" implementation of the InfectedFilesCollector. This non-abstract class will be managed component,
+ * since it directly implements the InfectedFilesCollectir, an inteface marked as "component contract".
+ * 
+ * @author cstamas
+ */
 public class NaiveInfectedFilesCollector
     implements InfectedFilesCollector
 {

@@ -8,6 +8,11 @@ import org.sonatype.nexus.proxy.item.StorageFileItem;
 import org.sonatype.nexus.proxy.repository.Repository;
 import org.sonatype.plugin.Managed;
 
+/**
+ * This is a "component contract" inferface of user component.
+ * 
+ * @author cstamas
+ */
 @Managed
 @Singleton
 public interface InfectedFilesCollector

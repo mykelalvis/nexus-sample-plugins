@@ -9,6 +9,13 @@ import org.sonatype.nexus.proxy.repository.ProxyRepository;
 import org.sonatype.nexus.proxy.repository.Repository;
 import org.sonatype.nexus.proxy.repository.RequestProcessor;
 
+/**
+ * This is a user implementation of a Nexus core interface marked with @ExtensionPoint (in short: implementation of
+ * extension point). Hence, this non abstract class will be managed as component by the core. All the IoC benefits are
+ * applied to this class.
+ * 
+ * @author cstamas
+ */
 public class VirusScannerRepositoryCustomizer
     implements RepositoryCustomizer
 {
