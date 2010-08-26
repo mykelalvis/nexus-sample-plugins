@@ -2,10 +2,10 @@ package org.sonatype.nexus.plugin.samples.kungfu;
 
 import java.io.File;
 
-import org.junit.Assert;
-import org.junit.Test;
 import org.sonatype.nexus.integrationtests.AbstractNexusProxyIntegrationTest;
 import org.sonatype.nexus.test.utils.GavUtil;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class VirusScannerIT
     extends AbstractNexusProxyIntegrationTest
