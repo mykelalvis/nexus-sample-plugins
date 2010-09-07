@@ -20,7 +20,7 @@
   <url>http://nexus.sonatype.org/</url>
 
   <properties>
-    <nexus.version>1.5.1-SNAPSHOT</nexus.version>
+    <nexus.version>1.6.0</nexus.version>
     <plexus.version>1.2.1</plexus.version>
   </properties>
 
