@@ -3,17 +3,17 @@ package org.sonatype.nexus.plugin.samples.kungfu;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.sonatype.nexus.proxy.item.StorageFileItem;
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 public class VirusScannerTest
 {
 
     private VirusScanner scanner;
 
-    @BeforeMethod
+    @Before
     public void createScanner()
         throws Exception
     {
